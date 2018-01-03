@@ -58,11 +58,20 @@ money|+30/5s|no|no|no|no|
 
 ## 操作
 在進入bot /start之後
+
 利用'intro' 開始
+
 接下來bot 會自動開始活動
+
 而只有當bot 需要玩家做操作時，才會跳出訊息通知玩家
+
 玩家可以利用選項及顯示的資訊來操作，輸入option中括號裡的選項名稱來操作
+
 也可以使用 'kill' 殺掉目前的bot 
+
 在bot 死亡後，等待1分鐘來初始化
+
 看到 "You can start again" 即可輸入 'initial' 來初始化
+
 之後便可以再次利用 'intro' 開始
+
