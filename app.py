@@ -8,7 +8,7 @@ from fsm import TocMachine
 
 
 API_TOKEN = '480513885:AAEwQboNf9fJUuE13pBQLl4URAj5F3QCT00'
-WEBHOOK_URL = 'https://83a55c17.ngrok.io/hook'
+WEBHOOK_URL = 'https://945473ad.ngrok.io/hook'
 
 app = Flask(__name__)
 bot = telegram.Bot(token=API_TOKEN)
@@ -125,6 +125,28 @@ machine = TocMachine(
                         'boring'],
             'dest': 'normal',
             'conditions': 'do_nothing'
+        },
+        {
+            'trigger': 'advance',
+            'source' : ['hungry',
+                        'hungry_option1',
+                        'hungry_option2',        
+
+                        'sick',
+                        'sick_option1',
+                        'sick_option2',        
+
+                        'boring',
+                        'boring_option1',
+                        'boring_option2',
+                        'boring_option3',        
+
+                        'angry',
+                        'angry_option1',
+                        'angry_option2',
+                        'angry_option3',],
+            'dest': 'dead',
+            'conditions': 'kill_this'
         },
 
         {

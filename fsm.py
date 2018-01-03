@@ -60,7 +60,7 @@ class TocMachine(GraphMachine):
         counter = 0      
         update.message.reply_text(' Life Level : ' + str(life_level))
         while(counter<5):            
-            time.sleep(30)
+            time.sleep(5)
 
             money = money + 30
             sick_level = sick_level + 3
@@ -89,7 +89,8 @@ class TocMachine(GraphMachine):
             
             counter = counter+1
         
-        self.is_going_to_check(update)
+        if(counter == 5):
+            self.is_going_to_check(update)
                             
 
     def on_exit_normal(self, update):
@@ -331,8 +332,8 @@ class TocMachine(GraphMachine):
         print("dead")
 
     def on_enter_dead(self, update):        
-        update.message.reply_text("I'm dead. Wait for 10 minutes and initialize 'initial'.")
-        time.sleep(600)
+        update.message.reply_text("I'm dead. Wait for 1 minutes and initialize 'initial'.")
+        time.sleep(60)
 
     def on_exit_dead(self, update):
         update.message.reply_text('You can start again.')
@@ -341,3 +342,7 @@ class TocMachine(GraphMachine):
     def do_nothing(self, update):
         text = update.message.text        
         return text.lower() == 'do nothing'
+
+    def kill_this(self, update):
+        text = update.message.text        
+        return text.lower() == 'kill'
