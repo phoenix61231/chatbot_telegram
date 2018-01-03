@@ -57,6 +57,10 @@ money|+30/5s|no|no|no|no|
 而life 在進入不同state 的時候會+-
 
 ## 操作
+執行python3 app.py
+
+bot name : F74041022_bot
+
 在進入bot /start之後
 
 利用'intro' 開始
