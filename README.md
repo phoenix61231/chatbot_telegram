@@ -1,7 +1,7 @@
 # chatbot_telegram
 ![pic](./show-fsm.png)
 
-## 簡易電子雞
+## My name is Joseph
 實作出一個簡易的電子雞，bot會隨時間有不同狀態 -normal -hungry -sick -boring -angry -dead，各項數值達到一個標準時，會跳到相對應的狀態， 而在某些state 可以藉由選項來對bot 進行操作，目標是要讓bot 活的越久越好。
 
 ## State
