@@ -38,8 +38,9 @@ class TocMachine(GraphMachine):
         text = update.message.text                        
         return text.lower() == 'intro'
 
-    def on_enter_name(self, update):        
-        update.message.reply_text('Hi! My name is ' + name) 
+    def on_enter_name(self, update):   
+        localtime = time.asctime(time.localtime(time.time()))     
+        update.message.reply_text(localtime+'\n\nHi! My name is ' + name) 
         self.is_going_to_normal(update)       
 
     def on_exit_name(self, update):
@@ -331,8 +332,9 @@ class TocMachine(GraphMachine):
     def is_going_to_dead(self, update):
         print("dead")
 
-    def on_enter_dead(self, update):        
-        update.message.reply_text("I'm dead. Wait for 1 minutes and initialize 'initial'.")
+    def on_enter_dead(self, update): 
+        localtime = time.asctime(time.localtime(time.time()))       
+        update.message.reply_text(localtime + "\n\nI'm dead. Wait for 1 minutes and initialize 'initial'.")
         time.sleep(60)
 
     def on_exit_dead(self, update):
